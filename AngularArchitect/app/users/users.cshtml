@@ -2,5 +2,7 @@
 <h2>Users</h2>
 
 <div ng-repeat="model in vm.Users track by $index">
-    {{model}}
+    <strong ng-bind="model.name"></strong>
 </div>
+
+<input data-ng-model="vm.Users[0].name" class="form-control"/>

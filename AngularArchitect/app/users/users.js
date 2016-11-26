@@ -1,21 +1,23 @@
 ﻿/// <reference path="~/Scripts/_reference.js" />
 
-(function (ng) {
+(function () {
 
-    'use strict';
+    function controller($http) {
+        var vm = this;
+        vm.Users = [];
+
+        vm.$onInit = function () {
+            $http.get("./app/api/users.json").then(function (response) {
+                vm.Users = response.data;
+            });
+        };
+    };
 
     angular
         .module('app.users')
-        .controller('Users', Dashboard);
-
-    Dashboard.$inject = ['Users'];
-
-    function Dashboard(Users) {
-
-        var vm = this;
-        vm.Users = Users;
-
-        console.log(vm.Users);
-
-    }
-})(angular);
+        .component('users', {
+            templateUrl: "Template/Index?feature=users&template=users",
+            controller: ["$http", controller],
+            controllerAs: 'vm'
+        });
+})();
