@@ -124,6 +124,8 @@
   <ItemGroup>
     <Content Include="app\users\user-details.js" />
     <Content Include="app\users\users.js" />
+    <Content Include="Content\animate.css" />
+    <Content Include="Content\animate.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
