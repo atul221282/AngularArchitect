@@ -142,7 +142,7 @@
     <Content Include="app\users\config.route.js" />
     <Content Include="app\web.config" />
     <Content Include="app\users\users.cshtml" />
-    <Content Include="app\api\users.json" />
+    <Content Include="app\json\users.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
