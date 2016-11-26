@@ -2,7 +2,11 @@
 <h2>Users</h2>
 
 <div ng-repeat="model in vm.Users track by $index">
-    <a ui-sref="user-details({ id: model.id })"><strong ng-bind="model.name"></strong></a>
-</div>
 
-<input data-ng-model="vm.Users[0].name" class="form-control" />
+    <a ui-sref="user-details({ id: model.id })"><strong ng-bind="model.name"></strong></a>
+
+    <user-details id="model.id" set-user="vm.setUser(model,user)"></user-details>
+
+    <br />
+
+</div>

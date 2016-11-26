@@ -11,6 +11,10 @@
                 vm.Users = response.data;
             });
         };
+
+        vm.setUser = function (user, value) {
+            user.name = value.name;
+        };
     };
 
     angular

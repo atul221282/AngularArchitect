@@ -3,4 +3,6 @@
     <span ng-bind="vm.User.id"></span>
     <br />
     <input class="form-control" ng-model="vm.User.name" />
+
+    <button type="button" class="btn btn-default" ng-click="vm.setUser({user:vm.User})">Save</button>
 </div>

@@ -20,7 +20,17 @@
         $stateProvider
         .state("user-details", {
             url: "/user/:id",
-            template: '<user-details></user-details>',
+            template: '<user-details id="vm.id"></user-details>',
+            controllerAs: 'vm',
+            controller: ["id", function (id) {
+                let vm = this;
+                vm.id = id;
+            }],
+            resolve: {
+                id: ["$stateParams", function ($stateParams) {
+                    return $stateParams.id;
+                }]
+            }
         })
         .state("users", {
             url: "/users",
