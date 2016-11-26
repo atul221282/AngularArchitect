@@ -18,9 +18,13 @@
 
         // Now set up the states
         $stateProvider
-          .state("users", {
-              url: "/users",
-              template: '<users></users>'
-          });
+        .state("user-details", {
+            url: "/user/:id",
+            template: '<user-details></user-details>',
+        })
+        .state("users", {
+            url: "/users",
+            template: '<users></users>'
+        });
     }
 })();

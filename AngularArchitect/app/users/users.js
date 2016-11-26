@@ -7,7 +7,7 @@
         vm.Users = [];
 
         vm.$onInit = function () {
-            $http.get("./json/api/users.json").then(function (response) {
+            $http.get("./app/json/users.json").then(function (response) {
                 vm.Users = response.data;
             });
         };
@@ -20,4 +20,5 @@
             controller: ["$http", controller],
             controllerAs: 'vm'
         });
+
 })();
