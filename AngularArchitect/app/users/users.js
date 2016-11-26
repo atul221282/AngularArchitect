@@ -12,8 +12,8 @@
             });
         };
 
-        vm.setUser = function (user, value) {
-            user.name = value.name;
+        vm.setUser = function (index, value) {
+            vm.Users[index] = angular.copy(value);
         };
     };
 

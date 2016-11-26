@@ -5,7 +5,7 @@
 
     <a ui-sref="user-details({ id: model.id })"><strong ng-bind="model.name"></strong></a>
 
-    <user-details id="model.id" set-user="vm.setUser(model,user)"></user-details>
+    <user-details id="model.id" set-user="vm.setUser($index,user)"></user-details>
 
     <br />
 
