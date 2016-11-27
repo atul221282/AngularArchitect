@@ -3,11 +3,10 @@
 (function () {
 	'use strict';
 
-	angular.module('app', [
+	angular.module('app.core', [
 
-		'app.core',
+		'ui.router',
 
-		'app.users'
 	]);
 
 })();

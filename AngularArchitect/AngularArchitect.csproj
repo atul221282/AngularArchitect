@@ -122,6 +122,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\data\data.module.js" />
+    <Content Include="app\data\repository.user.js" />
     <Content Include="app\users\user-details.js" />
     <Content Include="app\users\users.js" />
     <Content Include="Content\animate.css" />
@@ -147,6 +149,7 @@
     <Content Include="app\users\users.cshtml" />
     <Content Include="app\json\users.json" />
     <Content Include="app\users\user-details.cshtml" />
+    <Content Include="app\core\core.module.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -189,9 +192,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Template\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
