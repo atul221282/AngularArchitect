@@ -6,8 +6,15 @@
         var vm = this;
         vm.User = {};
 
-        vm.$onInit = function () {
+        //vm.$onInit = function () {
+        //    getUser();
+        //};
 
+        vm.$onChanges = function (id) {
+            getUser();
+        };
+
+        function getUser() {
             RepositoryUser.getUsers().then(function (response) {
                 let id = parseInt(vm.id, 10);
                 response.data.forEach(function (user) {
@@ -18,7 +25,6 @@
                 });
             });
         };
-
     };
 
     angular
