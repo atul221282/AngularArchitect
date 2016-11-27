@@ -7,9 +7,10 @@
             <span ng-bind="vm.User.id"></span>
             <br />
             <input class="form-control" ng-model="vm.User.name" />
-
+            <br />
+            <input class="form-control" ng-model="vm.User.age" type="number" />
             <button type="button" class="btn btn-default" ng-click="vm.setUser({user:vm.User})">Save</button>
-            
+
         </ng-form>
     </div>
 </div>
