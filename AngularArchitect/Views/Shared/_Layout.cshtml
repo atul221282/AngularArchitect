@@ -35,17 +35,22 @@
     </div>
 
     <div class="container body-content">
-        @RenderBody()
+        <ng-form>
+            @RenderBody()
+        </ng-form>
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
-    <script src="~/Scripts/jquery-3.1.1.js"></script>
+
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/lodash.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
-    <script src="~/Scripts/angular.js"></script>
-    <script src="~/Scripts/angular-ui-router.js"></script>
-    <script src="~/Scripts/angular-animate.js"></script>
+
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-ui-router.min.js"></script>
+    <script src="~/Scripts/angular-animate.min.js"></script>
 
     <script src="~/app/app.module.js"></script>
     <script src="~/app/core/core.module.js"></script>

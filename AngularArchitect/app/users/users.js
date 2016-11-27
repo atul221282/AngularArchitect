@@ -12,8 +12,9 @@
             });
         };
 
-        vm.setUser = function (index, value) {
-            vm.Users[index] = angular.copy(value);
+        vm.setUser = function (id, value) {
+            var user = _.find(vm.Users, ['id', id]);
+            vm.Users[vm.Users.indexOf(user)] = value;
         };
     };
 
