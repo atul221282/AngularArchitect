@@ -2,12 +2,12 @@
 
 (function () {
 
-    function controller($http) {
+    function controller($http, RepositoryUser) {
         var vm = this;
         vm.Users = [];
 
         vm.$onInit = function () {
-            $http.get("./app/json/users.json").then(function (response) {
+            RepositoryUser.getUsers().then(function (response) {
                 vm.Users = response.data;
             });
         };
@@ -21,7 +21,7 @@
         .module('app.users')
         .component('users', {
             templateUrl: "Template/Index?feature=users&template=users",
-            controller: ["$http", controller],
+            controller: ['$http', 'repository.user', controller],
             controllerAs: 'vm'
         });
 

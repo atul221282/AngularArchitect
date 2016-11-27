@@ -8,15 +8,19 @@
     angular.module('app.data')
     .factory('repository.user', RepositoryUser);
 
-    RepositorySession.$inject = ['breeze.config', 'model', 'repository.abstract'];
+    RepositoryUser.$inject = ['api.factory'];
 
-    function RepositorySession(breezeConfig, model, AbstractRepository) {
+    function RepositoryUser(APIFactory) {
         let repo = {
-            getUsers:getUsers
+            getUsers: getUsers
         };
 
         function getUsers() {
-
+            return APIFactory.Get('./app/json/users.json').then(function (data) {
+                return data;
+            }, function (error) {
+                return error;
+            });
         };
 
         return repo;

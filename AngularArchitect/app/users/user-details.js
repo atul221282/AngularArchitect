@@ -2,13 +2,13 @@
 
 (function () {
 
-    function controller($http) {
+    function controller($http, RepositoryUser) {
         var vm = this;
         vm.User = {};
 
         vm.$onInit = function () {
 
-            $http.get('./app/json/users.json').then(function (response) {
+            RepositoryUser.getUsers().then(function (response) {
                 let id = parseInt(vm.id, 10);
                 response.data.forEach(function (user) {
                     if (id === user.id) {
@@ -29,7 +29,7 @@
                 id: "<",
                 setUser: '&'
             },
-            controller: ['$http', controller],
+            controller: ['$http', 'repository.user', controller],
             controllerAs: 'vm'
         });
 

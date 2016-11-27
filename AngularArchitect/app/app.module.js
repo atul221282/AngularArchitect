@@ -1,13 +1,14 @@
 ﻿/// <reference path="~/Scripts/_reference.js" />
 
 (function () {
-	'use strict';
+    'use strict';
 
-	angular.module('app', [
+    angular.module('app', [
 
 		'app.core',
+		'app.data',
 
 		'app.users'
-	]);
+    ]);
 
 })();

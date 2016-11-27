@@ -122,6 +122,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\core\api.factory.js" />
     <Content Include="app\data\data.module.js" />
     <Content Include="app\data\repository.user.js" />
     <Content Include="app\users\user-details.js" />
