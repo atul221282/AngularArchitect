@@ -1,0 +1,22 @@
+﻿<div class="row">
+    <div class="col-sm-12">
+        <ng-form>
+            <h2>Users</h2>
+
+            <div ng-repeat="model in vm.Users track by $index" class="row top10">
+                <div class="col-sm-8">
+                    <a ui-sref="user-details({ id: model.id })"><strong ng-bind="model.name"></strong></a>
+                </div>
+                <div class="col-sm-4">
+                    <button class="btn btn-default" type="button" ng-click="vm.selectedId=model.id">Select</button>
+                </div>
+            </div>
+
+        </ng-form>
+    </div>
+</div>
+
+<div class="col-sm-12">
+    <user-details id="vm.selectedId" ng-if="vm.selectedId"
+                  set-user="vm.setUser(vm.selectedId,user)"></user-details>
+</div>
