@@ -216,6 +216,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="app\model\users\users.ts" />
     <TypeScriptCompile Include="app\users\users.ts" />
   </ItemGroup>
   <ItemGroup>
