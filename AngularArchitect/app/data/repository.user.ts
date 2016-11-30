@@ -16,12 +16,13 @@
         public getUsers(): ng.IPromise<app.model.users.IUser[]> {
             var deferred = this.q.defer();
 
-            this.http.get<app.model.users.IUser[]>("./app/json/users.jsond").then((response) => {
+            this.http.get<app.model.users.IUser[]>("./app/json/users.json").then((response) => {
                 this.hasError = false;
                 deferred.resolve((response.data) as app.model.users.IUser[]);
             }).catch((reason) => {
                 this.error = reason;
                 this.hasError = true;
+                deferred.reject(reason);
             });
 
             return deferred.promise;

@@ -12,12 +12,13 @@ var app;
                 UserRepository.prototype.getUsers = function () {
                     var _this = this;
                     var deferred = this.q.defer();
-                    this.http.get("./app/json/users.jsond").then(function (response) {
+                    this.http.get("./app/json/users.json").then(function (response) {
                         _this.hasError = false;
                         deferred.resolve((response.data));
                     }).catch(function (reason) {
                         _this.error = reason;
                         _this.hasError = true;
+                        deferred.reject(reason);
                     });
                     return deferred.promise;
                 };

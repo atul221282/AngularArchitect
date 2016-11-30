@@ -149,7 +149,6 @@
     <Content Include="Scripts\angular-route.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="app\users\users.module.js" />
-    <Content Include="app\app.module.js" />
     <Content Include="app\users\config.route.js" />
     <Content Include="app\web.config" />
     <Content Include="app\users\users.cshtml" />
@@ -214,7 +213,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app\data\IBaseRepository.ts" />
+    <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\data\repository.base.ts" />
     <TypeScriptCompile Include="app\data\repository.user.ts" />
     <TypeScriptCompile Include="app\model\users\users.ts" />
     <TypeScriptCompile Include="app\users\users.ts" />
