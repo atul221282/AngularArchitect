@@ -1,8 +1,11 @@
 ﻿<div class="row">
     <div class="col-sm-12">
         <ng-form>
+
             <h2>Users</h2>
-            
+
+            <h2 class="text-danger" ng-if="vm.RepositoryUser.hasError">Http Error occurred!</h2>
+
             <div ng-repeat="model in vm.Users track by $index" class="row top10">
                 <div class="col-sm-8">
                     <a ui-sref="user-details({ id: model.id })"><strong ng-bind="model.name"></strong></a>

@@ -126,7 +126,6 @@
   <ItemGroup>
     <Content Include="app\core\api.factory.js" />
     <Content Include="app\data\data.module.js" />
-    <None Include="app\data\repository.user.js.old" />
     <Content Include="app\users\user-details.js" />
     <Content Include="Content\animate.css" />
     <Content Include="Content\animate.min.css" />
@@ -215,6 +214,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="app\data\IBaseRepository.ts" />
     <TypeScriptCompile Include="app\data\repository.user.ts" />
     <TypeScriptCompile Include="app\model\users\users.ts" />
     <TypeScriptCompile Include="app\users\users.ts" />
@@ -222,6 +222,7 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -25,6 +25,7 @@
         public test: string;
         public Users: app.model.users.IUser[];
         public vm: UsersController;
+        
         static $inject: string[] = ["$http", "repository.user"];
 
         constructor(private $http: any, private RepositoryUser: app.data.repository.UserRepository) {
@@ -33,6 +34,7 @@
 
         public $onInit(): void {
             let data = this.vm;
+            
             this.RepositoryUser.getUsers().then(function (response) {
                 data.Users = response;
                 console.dir(this.Users);
