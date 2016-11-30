@@ -19,10 +19,11 @@ var app;
                 this.vm = this;
             }
             UsersController.prototype.$onInit = function () {
+                var _this = this;
                 var data = this.vm;
                 this.RepositoryUser.getUsers().then(function (response) {
                     data.Users = response;
-                    console.dir(this.Users);
+                    console.dir(_this.Users);
                 });
             };
             UsersController.prototype.setUser = function (id, value) {
