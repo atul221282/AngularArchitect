@@ -27,14 +27,14 @@
         public vm: UsersController;
         static $inject: string[] = ["$http", "repository.user"];
 
-        constructor(private $http: any, private RepositoryUser: any) {
+        constructor(private $http: any, private RepositoryUser: app.data.repository.UserRepository) {
             this.vm = this;
         }
 
         public $onInit(): void {
             let data = this.vm;
             this.RepositoryUser.getUsers().then(function (response) {
-                data.Users = response.data;
+                data.Users = response;
                 console.dir(this.Users);
             });
         }

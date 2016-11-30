@@ -126,9 +126,8 @@
   <ItemGroup>
     <Content Include="app\core\api.factory.js" />
     <Content Include="app\data\data.module.js" />
-    <Content Include="app\data\repository.user.js" />
+    <None Include="app\data\repository.user.js.old" />
     <Content Include="app\users\user-details.js" />
-    <None Include="app\users\users.js.old" />
     <Content Include="Content\animate.css" />
     <Content Include="Content\animate.min.css" />
     <Content Include="Content\bootstrap-flex.css" />
@@ -216,6 +215,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="app\data\repository.user.ts" />
     <TypeScriptCompile Include="app\model\users\users.ts" />
     <TypeScriptCompile Include="app\users\users.ts" />
   </ItemGroup>

@@ -21,7 +21,7 @@ var app;
             UsersController.prototype.$onInit = function () {
                 var data = this.vm;
                 this.RepositoryUser.getUsers().then(function (response) {
-                    data.Users = response.data;
+                    data.Users = response;
                     console.dir(this.Users);
                 });
             };

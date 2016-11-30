@@ -6,10 +6,6 @@
         var vm = this;
         vm.User = {};
 
-        //vm.$onInit = function () {
-        //    getUser();
-        //};
-
         vm.$onChanges = function (id) {
             getUser();
         };
@@ -17,7 +13,7 @@
         function getUser() {
             RepositoryUser.getUsers().then(function (response) {
                 let id = parseInt(vm.id, 10);
-                response.data.forEach(function (user) {
+                response.forEach(function (user) {
                     if (id === user.id) {
                         vm.User = user;
                         return;
